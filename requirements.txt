@@ -1,0 +1,2 @@
+# Optional dependencies for Redis support
+redis>=4.5.0
