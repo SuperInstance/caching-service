@@ -4,44 +4,39 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "caching-service"
-version = "0.1.0"
-description = "Redis-based response caching with TTL management"
+version = "1.0.0"
+description = "Intelligent in-memory cache with TTL, eviction policies, namespaces, and cache-aside patterns"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "SuperInstance"},
 ]
-keywords = ["cache", "redis", "ttl", "response-caching", "memoization"]
+keywords = ["cache", "ttl", "lru", "lfu", "fifo", "eviction", "memoization", "cache-aside"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 dependencies = []
 
 [project.optional-dependencies]
-redis = [
-    "redis>=4.5.0",
-]
 dev = [
     "pytest>=7.0.0",
-    "pytest-asyncio>=0.21.0",
-    "pytest-cov>=4.0.0",
-    "black>=23.0.0",
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/caching-service"
-Documentation = "https://github.com/yourusername/caching-service#readme"
-Repository = "https://github.com/yourusername/caching-service"
+Repository = "https://github.com/SuperInstance/caching-service"
+
+[tool.setuptools.packages.find]
+include = ["caching_service*"]
 
 [tool.black]
 line-length = 100
-target-version = ['py38']
+target-version = ['py310']

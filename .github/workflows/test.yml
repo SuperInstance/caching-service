@@ -15,7 +15,4 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -e ".[dev]"
-        continue-on-error: true
-      - run: pip install pytest
       - run: python -m pytest tests/ -v
-        continue-on-error: true
